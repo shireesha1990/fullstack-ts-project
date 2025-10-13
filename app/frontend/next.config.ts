@@ -1,7 +1,9 @@
-import type { NextConfig } from "next";
+const path = require('path');
 
-const nextConfig: NextConfig = {
-  /* config options here */
+module.exports = {
+  webpack: (config) => {
+    config.resolve.alias['@shared'] = path.resolve(__dirname, '../../packages/shared/src');
+    return config;
+  },
 };
 
-export default nextConfig;

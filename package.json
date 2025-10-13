@@ -2,10 +2,18 @@
   "name": "ts-fullstack-app",
   "private": true,
   "workspaces": [
+    "apps/*",
     "packages/*"
   ],
+  "packageManager": "npm@10.8.1",
   "scripts": {
-    "dev:backend": "npm run dev --workspace backend",
-    "dev:frontend": "npm run dev --workspace frontend"
+    "dev": "turbo run dev"
+  },
+  "devDependencies": {
+    "turbo": "^2.0.0",
+    "typescript": "^5.4.0"
+  },
+  "dependencies": {
+    "ngx-text-diff": "^0.6.0"
   }
 }
